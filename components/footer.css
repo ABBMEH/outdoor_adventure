@@ -1,0 +1,42 @@
+@import "../global/variables.css";
+
+footer {
+  background-color: var(--footer-background-color);
+  padding: 45px;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-contact p,
+.footer-copyright p {
+  font-family: var(--text-font-1);
+  color: var(--footer-text-color);
+  font-size: 16px;
+  text-align: center;
+}
+
+.footer-copyright p {
+  user-select: none;
+}
+
+@media (max-width: 1600px) {
+  footer {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 20px 5%;
+  }
+
+  .footer-contact p,
+  .footer-copyright p {
+    font-size: 12px;
+  }
+}

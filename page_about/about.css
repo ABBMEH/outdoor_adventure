@@ -1,0 +1,136 @@
+@import "../global/variables.css";
+@import "../components/navbar.css";
+@import "../components/footer.css";
+@import "../components/hero2.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--page-background-color);
+  width: 100vw;
+}
+
+header {
+  width: 100vw;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.global-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.section-1-row,
+.section-2-row {
+  display: flex;
+  gap: 3%;
+}
+
+.section-1-description,
+.section-1-image,
+.part-1,
+.part-2 {
+  flex: 1;
+}
+
+.section-1-image img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 10px 10px 0px 1px rgba(0, 0, 0, 0.07);
+  user-select: none;
+}
+
+.section-1-titre {
+  text-align: left;
+  font-family: var(--text-font-2);
+  color: var(--title-text-color);
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.underline-type1 {
+  padding: 1.5px 22px;
+  background-color: var(--underline-color);
+  display: inline-block;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.section-1-description p,
+.part-1 p,
+.part-2-description {
+  font-family: var(--text-font-1);
+  color: var(--light-text-color);
+  font-size: 16px;
+  padding: 0 20px 0 0;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.part-1 h3,
+.part-2 h4 {
+  text-align: left;
+  font-family: var(--text-font-2);
+  color: var(--title-text-color);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.enum-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.enum-item p {
+  margin: 0;
+  font-family: var(--text-font-1);
+  font-size: 16px;
+  padding-left: 6px;
+}
+
+.enum-item span {
+  width: 14px;
+  height: 3px;
+  background-color: var(--underline-color);
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.global-enum .enum-item p {
+  color: var(--title-text-color);
+}
+
+@media (max-width: 992px) {
+  .global-section {
+    padding: 8% 8%;
+  }
+
+  .section-1-row,
+  .section-2-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .section-1-image img {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
+}

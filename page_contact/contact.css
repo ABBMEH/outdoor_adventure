@@ -1,0 +1,233 @@
+@import "../global/variables.css";
+@import "../components/button.css";
+@import "../components/navbar.css";
+@import "../components/footer.css";
+@import "../components/hero2.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--page-background-color);
+  width: 100vw;
+}
+
+header {
+  width: 100vw;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.contact-section {
+  padding: 6% 20%;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6vw;
+  justify-content: space-between;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.contact-form h2,
+.contact-info h2,
+.contact-info h3 {
+  font-family: var(--text-font-2);
+  color: var(--title-text-color);
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  font-size: 16px;
+  font-family: var(--text-font-1);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  user-select: none;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-info p {
+  font-family: var(--text-font-1);
+  font-size: 16px;
+  color: var(--light-text-color);
+  margin-bottom: 0;
+}
+
+.contact-item {
+  margin-bottom: 20px;
+}
+
+.contact-label {
+  display: block;
+  font-family: var(--text-font-2);
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--title-text-color);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 0;
+}
+
+.social-btn {
+  width: 48px;
+  height: 48px;
+  background-color: var(--button-background-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.social-btn:hover {
+  background-color: #000;
+}
+
+.social-btn svg {
+  width: 55%;
+  height: 55%;
+}
+
+.icon-path {
+  fill: var(--button-text-color);
+}
+
+@media (max-width: 1600px) {
+  .contact-section {
+    padding: 60px 10%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .contact-section {
+    padding: 50px 5%;
+  }
+
+  .contact-container {
+    gap: 30px;
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-btn svg {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-form,
+  .contact-info {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .contact-section {
+    padding: 40px 5%;
+  }
+
+  .contact-form h2,
+  .contact-info h2 {
+    font-size: 24px;
+  }
+
+  .contact-form button {
+    width: 180px;
+  }
+
+  .social-icons {
+    padding-top: 2%;
+    gap: 40px;
+  }
+
+  .social-btn {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 30px 5%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 20px 5%;
+  }
+
+  .contact-form h2,
+  .contact-info h2 {
+    font-size: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .contact-form textarea {
+    height: 100px;
+  }
+
+  .contact-form button {
+    font-size: 12px;
+    padding: 8px 0;
+    height: 50px;
+  }
+
+  .contact-info p {
+    font-size: 13px;
+  }
+
+  .social-icons {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,95 @@
+@import "../global/variables.css";
+@import "../components/navbar.css";
+@import "../components/footer.css";
+@import "../components/hero2.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--page-background-color);
+  width: 100vw;
+}
+
+header {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.description {
+  text-align: center;
+  color: var(--title-text-color);
+  padding: 5% 30% 0;
+}
+
+.description h2 {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: var(--text-font-2);
+}
+
+.description span {
+  display: block;
+  width: 90px;
+  height: 3px;
+  background-color: var(--underline-color);
+  margin: 20px auto;
+}
+
+.description p {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 2%;
+  font-family: var(--text-font-1);
+  color: var(--light-text-color);
+}
+
+.global-img {
+  display: flex;
+  justify-content: center;
+  padding: 4% 20%;
+  text-align: center;
+  font-family: var(--text-font-1);
+}
+
+.part-1-img img {
+  width: 80%;
+  border-radius: 4px;
+  box-shadow: 10px 10px 0px 1px rgba(0, 0, 0, 0.07);
+  user-select: none;
+}
+
+.part-1-img .img-titre {
+  color: var(--title-text-color);
+  font-family: var(--text-font-2);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+  padding: 25px;
+}
+
+.part-1-img .img-description {
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0 15% 10%;
+  color: var(--light-text-color);
+  font-family: var(--text-font-1);
+}
+
+@media (max-width: 992px) {
+  .global-img {
+    flex-direction: column;
+    padding: 8% 8%;
+  }
+
+  .description {
+    padding: 5% 20% 0;
+  }
+}
