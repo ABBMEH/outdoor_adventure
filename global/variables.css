@@ -33,7 +33,6 @@
   --navbar-burger-button-icon-stroke-width: 2;
   --navbar-burger-button-icon-color: var(--button-text-color);
   --navbar-burger-button-background-color: var(--button-background-color);
-  --navbar-burger-button-background-color-hover: var(--button-background-color-hover);
   --navbar-burger-menu-background-color: rgba(44, 60, 80, 0.98);
 
   /*hero*/
@@ -44,8 +43,6 @@
 
   /*button style*/
   --button-background-color: #fb2056;
-  --button-background-color-hover: #da1c4b;
-  --button-background-color-idle: #f3a8a8;
   --button-border-radius: 30px;
   --button-text-font: var(--text-font-2);
   --button-text-color: #eee;

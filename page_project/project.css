@@ -1,8 +1,3 @@
-@import "../global/variables.css";
-@import "../components/navbar.css";
-@import "../components/footer.css";
-@import "../components/hero2.css";
-
 * {
   margin: 0;
   padding: 0;
@@ -87,7 +82,7 @@ h4 {
 
 .carousel-item {
   flex: 0 0 33.33%;
-  padding: 0 0 0 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -99,6 +94,8 @@ h4 {
   border-radius: 15px;
   transition: transform 0.3s ease;
   user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
 }
 
 .dots {
@@ -106,79 +103,6 @@ h4 {
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
-}
-
-.dot-label {
-  cursor: pointer;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  background-color: var(--button-background-color-idle);
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-#water-1:checked ~ .dots label[for="water-1"] .dot,
-#water-2:checked ~ .dots label[for="water-2"] .dot,
-#water-3:checked ~ .dots label[for="water-3"] .dot,
-#water-4:checked ~ .dots label[for="water-4"] .dot,
-#mountain-1:checked ~ .dots label[for="mountain-1"] .dot,
-#mountain-2:checked ~ .dots label[for="mountain-2"] .dot,
-#mountain-3:checked ~ .dots label[for="mountain-3"] .dot,
-#mountain-4:checked ~ .dots label[for="mountain-4"] .dot,
-#camping-1:checked ~ .dots label[for="camping-1"] .dot,
-#camping-2:checked ~ .dots label[for="camping-2"] .dot,
-#camping-3:checked ~ .dots label[for="camping-3"] .dot,
-#camping-4:checked ~ .dots label[for="camping-4"] .dot {
-  background-color: var(--button-background-color);
-}
-
-#water-1:checked ~ .carousel {
-  transform: translateX(0);
-}
-#water-2:checked ~ .carousel {
-  transform: translateX(-33.33%);
-}
-#water-3:checked ~ .carousel {
-  transform: translateX(-66.66%);
-}
-#water-4:checked ~ .carousel {
-  transform: translateX(-99.99%);
-}
-
-#mountain-1:checked ~ .carousel {
-  transform: translateX(0);
-}
-#mountain-2:checked ~ .carousel {
-  transform: translateX(-33.33%);
-}
-#mountain-3:checked ~ .carousel {
-  transform: translateX(-66.66%);
-}
-#mountain-4:checked ~ .carousel {
-  transform: translateX(-99.99%);
-}
-
-#camping-1:checked ~ .carousel {
-  transform: translateX(0);
-}
-#camping-2:checked ~ .carousel {
-  transform: translateX(-33.33%);
-}
-#camping-3:checked ~ .carousel {
-  transform: translateX(-66.66%);
-}
-#camping-4:checked ~ .carousel {
-  transform: translateX(-99.99%);
-}
-
-input[name="water-radio"],
-input[name="mountain-radio"],
-input[name="camping-radio"] {
-  display: none;
 }
 
 @media (max-width: 1400px) {
@@ -200,24 +124,6 @@ input[name="camping-radio"] {
 
   .carousel-item {
     flex: 0 0 50%;
-  }
-
-  #water-2:checked ~ .carousel,
-  #mountain-2:checked ~ .carousel,
-  #camping-2:checked ~ .carousel {
-    transform: translateX(-50%);
-  }
-
-  #water-3:checked ~ .carousel,
-  #mountain-3:checked ~ .carousel,
-  #camping-3:checked ~ .carousel {
-    transform: translateX(-100%);
-  }
-
-  #water-4:checked ~ .carousel,
-  #mountain-4:checked ~ .carousel,
-  #camping-4:checked ~ .carousel {
-    transform: translateX(-150%);
   }
 
   .dot {
@@ -245,24 +151,6 @@ input[name="camping-radio"] {
   }
 
   .carousel-item img {
-    padding: 0 0;
-  }
-
-  #water-2:checked ~ .carousel,
-  #mountain-2:checked ~ .carousel,
-  #camping-2:checked ~ .carousel {
-    transform: translateX(-100%);
-  }
-
-  #water-3:checked ~ .carousel,
-  #mountain-3:checked ~ .carousel,
-  #camping-3:checked ~ .carousel {
-    transform: translateX(-200%);
-  }
-
-  #water-4:checked ~ .carousel,
-  #mountain-4:checked ~ .carousel,
-  #camping-4:checked ~ .carousel {
-    transform: translateX(-300%);
+    padding: 0;
   }
 }
